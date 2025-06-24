@@ -20,7 +20,8 @@ while true
   puts "2. listar todos os livros".colorize(:yellow)
   puts "3. buscar por um livro".colorize(:blue)
   puts "4. retirar livro".colorize(:magenta)
-  puts "5. sair".colorize(:red)
+  puts "5. vizualizar quantos livros a biblioteca contém".colorize(:yellow)
+  puts "6. sair".colorize(:red)
 
   opcao = gets.chomp.to_i
 
@@ -73,9 +74,13 @@ while true
       puts "livro não encontrado!".colorize(:red)
     end
 
-
-
   elsif opcao == 5
+    vizualizar_tamanho = minha_biblioteca.total_de_livros
+    print "a sua biblioteca contém ".colorize(:yellow)
+    print "#{vizualizar_tamanho}".colorize(:green)
+    puts " livros!".colorize(:yellow)
+  
+  elsif opcao == 6
    puts "obrigado por ter usado a biblioteca ate logo!".colorize(:blue)
    break
 

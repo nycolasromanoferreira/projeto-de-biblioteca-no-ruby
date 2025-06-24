@@ -72,8 +72,11 @@ class Biblioteca
     end
   end
 
-
-
+  def total_de_livros
+    tamanho = @acervo.size
+    return tamanho
+  end
+  
 
 
 end
